@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitepace-Landing-Page</title>
+    <!-- Tailwind CSS Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Ion-Icons -->
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <header>
+      <!-- Navbar -->
+      <nav class="bg-blue-900 p-4">
+        <div class="container mx-auto flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center justify-center space-x-2 gap-4">
+            <img
+              src="./assets/logos/Logo Icon.png"
+              alt="Whitespace"
+              class="w-8"
+            />
+            <p class="text-white text-xl font-semibold">Whitespace</p>
+          </div>
+          <div class="flex gap-x-10">
+            <!-- Navigation Links -->
+            <div class="hidden lg:flex items-center space-x-6 text-white">
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-center justify-center gap-x-3"
+                >Products<ion-icon name="chevron-down-outline"></ion-icon
+              ></a>
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-center justify-center gap-x-3"
+                >Solutions<ion-icon name="chevron-down-outline"></ion-icon
+              ></a>
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-center justify-center gap-x-3"
+                >Resources<ion-icon name="chevron-down-outline"></ion-icon
+              ></a>
+              <a
+                href="#"
+                class="hover:text-gray-300 flex items-center justify-center gap-x-3"
+                >Pricing<ion-icon name="chevron-down-outline"></ion-icon
+              ></a>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <!-- Buttons -->
+              <div class="hidden md:flex items-center space-x-4">
+                <button
+                  class="bg-yellow-400 text-white font-semibold px-4 py-2 rounded-md hover:bg-yellow-500"
+                >
+                  Login
+                </button>
+                <button
+                  class="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+                >
+                  Try Whitespace free
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </button>
+              </div>
+              <!-- Mobile Menu Icon -->
+              <ion-icon
+                onclick="onToggleMenu(this)"
+                name="menu"
+                class="text-3xl text-white cursor-pointer lg:hidden"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation Links -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden flex-col text-white p-4 transition-all ease-in-out duration-300"
+        >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 flex items-center justify-center gap-x-3"
+            >Products<ion-icon name="chevron-down-outline"></ion-icon
+          ></a>
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 flex items-center justify-center gap-x-3"
+            >Solutions<ion-icon name="chevron-down-outline"></ion-icon
+          ></a>
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 flex items-center justify-center gap-x-3"
+            >Resources<ion-icon name="chevron-down-outline"></ion-icon
+          ></a>
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-700 flex items-center justify-center gap-x-3"
+            >Pricing<ion-icon name="chevron-down-outline"></ion-icon
+          ></a>
+          <!-- Buttons in mobile view -->
+          <div class="mt-4 space-y-2 md:hidden">
+            <a
+              href="#"
+              class="block bg-yellow-400 text-white font-semibold px-4 py-2 rounded-md text-center hover:bg-yellow-500"
+            >
+              Login
+            </a>
+            <a
+              href="#"
+              class="block bg-blue-500 text-white font-semibold px-4 py-2 rounded-md text-center hover:bg-blue-600 flex items-center justify-center gap-x-3"
+            >
+              Try Whitespace free
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+      <section
+        class="bg-blue-900 min-h-screen"
+        style="
+          background-image: url('./assets/background-img/Element-1.png');
+          background-position: right 22% bottom;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-center"
+        >
+          <!-- Left Content -->
+          <div class="text-white text-center lg:text-left lg:w-1/2 space-y-6">
+            <h1 class="text-6xl md:text-7xl font-bold leading-tight">
+              Get More Done with whitespace
+            </h1>
+            <p class="text-xl leading-loose pb-10">
+              Project management software that enables your teams to
+              collaborate, plan, <br />
+              analyze and manage everyday tasks.
+            </p>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-2"
+              >
+                Try Taskey Free
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content: Illustration -->
+          <div class="lg:w-1/2 flex justify-center">
+            <img
+              src="./assets/images/big-isolated-employee-working-in-office-interior-workplace-vector.png"
+              alt="Banner-Image"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Project Management  -->
+      <section
+        class="min-h-screen"
+        style="
+          background-image: url('./assets/background-img/BACKGROUND-1.png');
+          background-position: left top;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center my-10 gap-8"
+        >
+          <!-- Left Content -->
+          <div class="text-black text-center lg:text-left lg:w-1/2 space-y-10">
+            <h1
+              class="text-6xl md:text-7xl font-bold leading-tight pb-5"
+              style="
+                background-image: url('./assets/background-img/Element-2.png');
+                background-position: right 50% bottom;
+                background-repeat: no-repeat;
+              "
+            >
+              Project <br />
+              Management
+            </h1>
+            <p class="text-xl leading-tight pb-5">
+              Images, videos, PDFs and audio files are supported. Create math
+              expressions and diagrams directly from the app. Take photos with
+              the mobile app and save them <br />
+              to a note.
+            </p>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+              >
+                Get Started
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="lg:w-1/2 flex justify-center">
+            <img
+              src="./assets/images/4-Things-in-B2B-Sales-Ops-That-Need-to-be-Automated-2.png"
+              alt="Banner-Image"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Work together -->
+      <section
+        class="bg-[url('./assets/background-img/BACKGROUND-1.png')] bg-cover bg-center min-h-screen"
+      >
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center my-10 gap-8"
+        >
+          <!-- Left Content -->
+          <div class="lg:w-1/2 flex justify-center">
+            <img
+              src="./assets/images/Screenshot_2024-11-05_073026.png"
+              alt="Banner-Image"
+            />
+          </div>
+          <!-- Right Content -->
+          <div class="text-black text-center lg:text-left lg:w-1/2 space-y-10">
+            <div>
+              <h1
+                class="text-6xl md:text-7xl font-bold leading-tight pb-5"
+                style="
+                  background-image: url('./assets/background-img/Element-2.png');
+                  background-position: right 22% bottom;
+                  background-repeat: no-repeat;
+                "
+              >
+                Work together
+              </h1>
+              <p class="text-xl leading-tight my-5 pb-5">
+                With whitepace, share your notes with your colleagues and
+                collaborate on them. You can also publish a note to the internet
+                and share the URL with others.
+              </p>
+            </div>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+              >
+                Try it now
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Use as Extension -->
+      <section class="bg-blue-900 min-h-screen">
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center my-10 gap-8"
+        >
+          <!-- Left Content -->
+          <div class="text-white text-center lg:text-left lg:w-1/2 space-y-6">
+            <h1
+              class="text-6xl md:text-7xl font-bold leading-tight pb-8"
+              style="
+                background-image: url('./assets/background-img/Group.png');
+                background-position: right 50% bottom;
+                background-repeat: no-repeat;
+              "
+            >
+              Use as Extension
+            </h1>
+            <p class="text-xl leading-loose pb-5">
+              Use the web clipper extension, available on Chrome and Firefox, to
+              save web pages or take screenshots as notes.
+            </p>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+              >
+                Let’s Go
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content: Illustration -->
+          <div class="lg:w-1/2 flex justify-center">
+            <img src="./assets/images/team-1024x715.png" alt="Banner-Image" />
+          </div>
+        </div>
+      </section>
+      <!-- Customise it to your needs -->
+      <section
+        class="bg-[url('./assets/background-img/BACKGROUND-1.png')] bg-cover bg-center min-h-screen"
+      >
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center my-10 gap-8"
+        >
+          <!-- Left Content -->
+          <div class="lg:w-1/2 flex justify-center">
+            <img
+              src="./assets/images/4-Things-in-B2B-Sales-Ops-That-Need-to-be-Automated-2.png"
+              alt="Banner-Image"
+            />
+          </div>
+          <!-- Right Content -->
+          <div class="text-black text-center lg:text-left lg:w-1/2 space-y-10">
+            <div>
+              <h1
+                class="text-5xl md:text-6xl font-bold leading-tight pb-5"
+                style="
+                  background-image: url('./assets/background-img/Element-2.png');
+                  background-position: right 70% bottom;
+                  background-repeat: no-repeat;
+                "
+              >
+                Customise it to <br />
+                your needs
+              </h1>
+              <p class="text-xl leading-tight my-5 pb-5">
+                Customise the app with plugins, custom themes and multiple text
+                editors (Rich <br />
+                Text or Markdown). Or create your own scripts and plugins using
+                the Extension <br />
+                API.
+              </p>
+            </div>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+              >
+                Let’s Go
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Choose Your Plan -->
+      <section class="min-h-screen">
+        <div class="container text-center mx-auto my-10">
+          <h1
+            class="text-5xl lg:text-6xl md:text-5xl font-bold leading-tight pb-6"
+            style="
+              background-image: url('./assets/background-img/Group.png');
+              background-position: right 40% bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            Choose Your Plan
+          </h1>
+          <p class="text-xl leading-tight my-2">
+            Whether you want to get organized, keep your personal life on track,
+            or boost workplace productivity, Evernote has the <br />
+            right plan for you.
+          </p>
+        </div>
+        <div class="container mx-auto p-8 my-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Free Plan -->
+            <div
+              class="border rounded-lg p-6 w-full bg-white shadow-lg"
+              style="border: 2px solid #ffe492"
+            >
+              <h2 class="text-2xl font-semibold">Free</h2>
+              <p class="text-3xl font-bold mt-2">$0</p>
+              <p class="mt-4 text-gray-700">
+                Capture ideas and find them quickly
+              </p>
+              <div class="mt-4 space-y-2 text-sm text-gray-700">
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                  Sync unlimited devices
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon> 10
+                  GB monthly uploads
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon> 200
+                  MB max. note size
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                  Customize Home dashboard and access extra widgets
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                  Connect primary Google Calendar account
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon> Add
+                  due dates, reminders, and notifications to your tasks
+                </p>
+              </div>
+              <button
+                class="mt-6 px-4 py-2 text-black font-semibold rounded-md hover:bg-blue-600"
+                style="border: 1px solid #ffe492"
+              >
+                Get Started
+              </button>
+            </div>
+            <!-- Personal Plan -->
+            <div
+              class="border rounded-lg p-6 w-full bg-blue-900 text-white shadow-lg"
+            >
+              <h2 class="text-2xl font-semibold">Personal</h2>
+              <p class="text-3xl font-bold mt-2" style="color: #ffe492">
+                $11.99
+              </p>
+              <p class="mt-4">Keep home and family on track</p>
+              <div class="mt-4 space-y-2 text-sm">
+                <p class="flex items-center gap-x-3">
+                  <ion-icon
+                    name="checkmark-done-circle-outline"
+                    style="color: #ffe492"
+                  ></ion-icon>
+                  Sync unlimited devices
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon
+                    name="checkmark-done-circle-outline"
+                    style="color: #ffe492"
+                  ></ion-icon>
+                  10 GB monthly uploads
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon
+                    name="checkmark-done-circle-outline"
+                    style="color: #ffe492"
+                  ></ion-icon>
+                  200 MB max. note size
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon
+                    name="checkmark-done-circle-outline"
+                    style="color: #ffe492"
+                  ></ion-icon>
+                  Customize Home dashboard and access extra widgets
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon
+                    name="checkmark-done-circle-outline"
+                    style="color: #ffe492"
+                  ></ion-icon>
+                  Connect primary Google Calendar account
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon
+                    name="checkmark-done-circle-outline"
+                    style="color: #ffe492"
+                  ></ion-icon>
+                  Add due dates, reminders, and notifications to your tasks
+                </p>
+              </div>
+              <button
+                class="mt-6 px-4 py-2 bg-white text-blue-900 font-semibold rounded-md hover:bg-gray-100"
+              >
+                Get Started
+              </button>
+            </div>
+            <!-- Organization Plan -->
+            <div
+              class="border rounded-lg p-6 w-full bg-white shadow-lg"
+              style="border: 2px solid #ffe492"
+            >
+              <h2 class="text-2xl font-semibold">Organization</h2>
+              <p class="text-3xl font-bold mt-2">$49.99</p>
+              <p class="mt-4 text-gray-700">
+                Capture ideas and find them quickly
+              </p>
+              <div class="mt-4 space-y-2 text-sm text-gray-700">
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                  Sync unlimited devices
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon> 10
+                  GB monthly uploads
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon> 200
+                  MB max. note size
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                  Customize Home dashboard and access extra widgets
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                  Connect primary Google Calendar account
+                </p>
+                <p class="flex items-center gap-x-3">
+                  <ion-icon name="checkmark-done-circle-outline"></ion-icon> Add
+                  due dates, reminders, and notifications to your tasks
+                </p>
+              </div>
+              <button
+                class="mt-6 px-4 py-2 text-black font-semibold rounded-md hover:bg-blue-600"
+                style="border: 1px solid #ffe492"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Work -->
+      <section
+        class="bg-blue-900 flex items-center justify-center min-h-screen bg-[url('./assets/background-img/BACKGROUND-2.png')] bg-cover bg-center relative"
+      >
+        <img
+          src="./assets/background-img/BACKGROUND-2.png"
+          alt=""
+          class="absolute left-0 top-100 object-cover"
+        />
+        <div class="container text-left xl:text-center text-white p-4">
+          <h1
+            class="text-5xl lg:text-6xl md:text-5xl font-bold leading-tight relative pb-3"
+            style="
+              background-image: url('./assets/background-img/Element-3.png');
+              background-position: right 30% bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            Your work, <br />
+            everywhere you are
+          </h1>
+          <p class="mt-3 text-lg mb-14">
+            Access your files from your computer, phone or tablet by
+            synchronizing with various services, including iCloud, Dropbox, and
+            <br />
+            OneDrive. The app is available on Windows, macOS, Linux, Android,
+            and iOS. A web app is also available!
+          </p>
+          <div class="flex items-start xl:grid xl:place-items-center">
+            <button
+              class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+            >
+              Try Taskey
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Our sponsors -->
+      <section class="flex items-center justify-center min-h-screen">
+        <div class="container text-center">
+          <!-- Heading -->
+          <h1
+            class="text-5xl lg:text-6xl md:text-5xl font-bold leading-tight relative pb-5"
+            style="
+              background-image: url('./assets/background-img/Element-2.png');
+              background-position: right 20% bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            Our sponsors
+          </h1>
+          <div class="flex flex-row items-center justify-center">
+            <div class="lg:flex lg:justify-between lg:gap-8 mt-10 sm:my-10">
+              <img
+                src="./assets/logos/Apple.png"
+                alt="Apple"
+                class="h-12 pb-5"
+              />
+              <img
+                src="./assets/logos/Microsoft.png"
+                alt="Microsoft"
+                class="h-12 pb-5"
+              />
+              <img
+                src="./assets/logos/Slack.png"
+                alt="Slack"
+                class="h-12 pb-5"
+              />
+              <img
+                src="./assets/logos/Group 246.png"
+                alt="Google"
+                class="h-12"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 100% your data -->
+      <section
+        class="bg-[url('./assets/background-img/BACKGROUND-1.png')] bg-cover bg-center min-h-screen"
+      >
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center my-10 gap-2"
+        >
+          <!-- Left Content -->
+          <div class="text-black text-center lg:text-left lg:w-3/5 space-y-10">
+            <div>
+              <h1
+                class="text-6xl md:text-7xl font-bold leading-tight pb-8"
+                style="
+                  background-image: url('./assets/background-img/Group.png');
+                  background-position: right 60% bottom;
+                  background-repeat: no-repeat;
+                "
+              >
+                100% your data
+              </h1>
+              <p class="text-xl leading-tight my-3 pb-5">
+                The app is open source and your notes are saved to an open
+                format, so you'll always have access to them. Uses End-To-End
+                Encryption (E2EE) to secure your notes and ensure no-one but
+                yourself can access them.
+              </p>
+            </div>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+              >
+                Read more
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="lg:w-2/5 flex justify-center">
+            <img src="./assets/images/Element-4.png" alt="Banner-Image" />
+          </div>
+        </div>
+      </section>
+      <!-- Use as Extension -->
+      <section
+        class="bg-blue-900 min-h-screen"
+        style="
+          background-image: url('./assets/background-img/Element-5.png');
+          background-position: right 22% bottom;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center gap-8"
+        >
+          <!-- Left Content -->
+          <div class="lg:w-1/2 flex justify-center">
+            <img src="./assets/images/Apps.png" alt="Banner-Image" />
+          </div>
+          <!-- Right Content: Illustration -->
+          <div class="text-white text-center lg:text-left lg:w-1/2 space-y-6">
+            <h1 class="text-6xl md:text-7xl font-bold leading-tight">
+              Work with Your Favorite Apps Using whitepace
+            </h1>
+            <p class="text-xl leading-loose pb-5">
+              Whitepace teams up with your favorite software. Integrate with
+              over 1000+ apps with Zapier to have all the tools you need for
+              your project success.
+            </p>
+            <div class="lg:flex lg:items-start grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-3"
+              >
+                Read more
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- What Our Clients Says -->
+      <section class="bg-white min-h-screen flex items-center justify-center">
+        <div class="container py-16 px-4">
+          <!-- Title -->
+          <h1
+            class="text-6xl md:text-7xl font-bold leading-tight text-center pb-5 mb-14"
+            style="
+              background-image: url('./assets/background-img/Group.png');
+              background-position: right 25% bottom;
+              background-repeat: no-repeat;
+            "
+          >
+            What Our Clients Says
+          </h1>
+
+          <!-- Carousel Container -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Testimonial Card 1 -->
+            <div
+              class="snap-center bg-white border border-gray-200 rounded-lg px-10 py-16 shadow-lg w-full md:w-90"
+            >
+              <div style="border-bottom: 1px solid #2e4e73">
+                <img src="assets/images/Quote.png" alt="Quote" class="mb-5" />
+                <p class="text-sm font-medium text-gray-800 mb-6">
+                  Whitespace is designed as a collaboration tool for businesses
+                  that is a full project management solution.
+                </p>
+              </div>
+              <div class="flex items-center mt-6">
+                <img
+                  src="./assets/images/Avater-1.png"
+                  alt="Avatar"
+                  class="w-12 h-12 rounded-full mr-6"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-1">
+                    Oberon Shaw, MCH
+                  </h3>
+                  <p class="text-sm text-gray-600">
+                    Head of Talent Acquisition, North America
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div
+              class="snap-center bg-blue-500 border border-gray-200 rounded-l px-10 py-16 shadow-lg w-full md:w-90"
+            >
+              <div style="border-bottom: 1px solid #2e4e73">
+                <img
+                  src="./assets/images/Quote-white.png"
+                  alt="Quote-white"
+                  class="mb-5"
+                />
+                <p class="text-sm font-medium text-gray-800 mb-6">
+                  Whitespace is designed as a collaboration tool for businesses
+                  that is a full project management solution.
+                </p>
+              </div>
+              <div class="flex items-center mt-4">
+                <img
+                  src="./assets/images/Avater-2.jpg"
+                  alt="Avatar"
+                  class="w-12 h-12 rounded-full mr-6"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-1">
+                    Oberon Shaw, MCH
+                  </h3>
+                  <p class="text-sm text-white">
+                    Head of Talent Acquisition, North America
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Card 3 -->
+            <div
+              class="snap-center bg-blue-500 border border-gray-200 rounded-l px-10 py-16 shadow-lg w-full md:w-90"
+            >
+              <div style="border-bottom: 1px solid #2e4e73">
+                <img
+                  src="./assets/images/Quote-white.png"
+                  alt="Quote-white"
+                  class="mb-5"
+                />
+                <p class="text-sm font-medium text-gray-800 mb-6">
+                  Whitespace is designed as a collaboration tool for businesses
+                  that is a full project management solution.
+                </p>
+              </div>
+              <div class="flex items-center mt-4">
+                <img
+                  src="./assets/images/Avater-3.jpg"
+                  alt="Avatar"
+                  class="w-12 h-12 rounded-full mr-6"
+                />
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-1">
+                    Oberon Shaw, MCH
+                  </h3>
+                  <p class="text-sm text-white">
+                    Head of Talent Acquisition, North America
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dots Indicator (Optional, requires JS to make dynamic) -->
+          <div class="flex justify-center mt-14 space-x-2">
+            <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+            <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+            <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+          </div>
+        </div>
+      </section>
+      <!-- Try Whitespace today -->
+      <section class="bg-blue-900">
+        <!-- Main Container -->
+        <div class="text-white min-h-screen flex items-center justify-center">
+          <!-- Header Section -->
+          <div class="container mx-auto text-center py-16 px-4">
+            <h1 class="text-6xl md:text-7xl font-semibold mb-4">
+              Try Whitespace <br />
+              today
+            </h1>
+            <p class="text-lg md:text-xl mb-8 mt-7 py-5">
+              Get started for free. <br />
+              Add your whole team as your needs grow.
+            </p>
+            <div class="grid place-items-center">
+              <button
+                class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-2 mb-8"
+              >
+                Try Taskey Free
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+            </div>
+            <p class="mb-8">On a big team? Contact sales</p>
+            <!-- Platform Icons -->
+            <div class="flex justify-center space-x-10 cursor-pointer">
+              <img
+                src="./assets/logos/apple-black-logo 2.png"
+                alt="Apple"
+                class="w-10 h-10"
+              />
+              <img
+                src="./assets/logos/windows-logo 1.png"
+                alt="Windows"
+                class="w-10 h-10"
+              />
+              <img
+                src="./assets/logos/android-logo 1.png"
+                alt="Android"
+                class="w-10 h-10"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="bg-blue-900 w-full py-10">
+      <div
+        class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5 px-4 text-white mb-10"
+      >
+        <!-- Logo and Description -->
+        <div>
+          <div class="flex gap-5">
+            <img
+              src="./assets/logos/Logo Icon.png"
+              alt="Whitespace"
+              class="w-8 mb-4"
+            />
+            <p>Whitespace</p>
+          </div>
+          <p>
+            Whitespace was created for <br />
+            the new ways we live and <br />
+            work. We make a better <br />
+            workspace around the world.
+          </p>
+        </div>
+        <!-- Product Links -->
+        <div>
+          <h3 class="font-semibold mb-2">Product</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:underline">Overview</a></li>
+            <li><a href="#" class="hover:underline">Pricing</a></li>
+            <li>
+              <a href="#" class="hover:underline">Customer stories</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Resources Links -->
+        <div>
+          <h3 class="font-semibold mb-2">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li>
+              <a href="#" class="hover:underline">Guides & tutorials</a>
+            </li>
+            <li><a href="#" class="hover:underline">Help center</a></li>
+          </ul>
+        </div>
+        <!-- Company Links -->
+        <div>
+          <h3 class="font-semibold mb-2">Company</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:underline">About us</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Media kit</a></li>
+          </ul>
+        </div>
+        <div class="text-white">
+          <h1 class="text-lg font-semibold mb-2 font-bold">Try It Today</h1>
+          <p class="leading-loose">
+            Get started for free. Add your whole team as your needs grow.
+          </p>
+          <div class="lg:flex lg:items-start grid place-items-center mt-4">
+            <button
+              class="bg-blue-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-600 flex items-center justify-center gap-x-2"
+            >
+              Start Today
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-white pt-5 px-4"
+        style="border-top: 1px solid #2e4e73"
+      >
+        <div class="flex space-x-4">
+          <a href="#" class="hover:underline">Terms & privacy</a>
+          <a href="#" class="hover:underline">Security</a>
+          <a href="#" class="hover:underline">Status</a>
+        </div>
+        <p class="mt-4 md:mt-0">&copy; 2024 Whitespace LLC.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const navLinks = document.getElementById("mobile-menu");
+      function onToggleMenu(icon) {
+        navLinks.classList.toggle("hidden");
+        icon.name = icon.name === "menu" ? "close" : "menu";
+      }
+    </script>
+  </body>
+</html>
